@@ -6,88 +6,13 @@
     <title>Jardim Vertical - Transformando concreto em vida</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --verde-musgo: #2E4A33;
-            --verde-claro: #7BB661;
-            --marrom-terra: #5D4037;
-            --cinza-pedra: #9E9E9E;
-            --branco-natural: #F5F5F5;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--branco-natural);
-            color: var(--verde-musgo);
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .btn-primary {
-            background-color: var(--verde-musgo);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.375rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: var(--verde-claro);
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--verde-musgo);
-            border: 2px solid var(--verde-musgo);
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.375rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .btn-secondary:hover {
-            background-color: var(--verde-musgo);
-            color: white;
-        }
-        .nav-link {
-            position: relative;
-            color: var(--verde-musgo);
-            font-weight: 500;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--verde-claro);
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1558435186-db6d3d9383b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-        }
-        .card {
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center mb-4 md:mb-0">
-                <img src="assets/img/logo.png" alt="Jardim Vertical Logo" class="h-16">
+                <img src="assets/img/logo.png" alt="Jardim Vertical Logo" class="h-16 mb-4 bg-white rounded-full shadow-md">
                 <div class="ml-4">
                     <h1 class="text-2xl font-bold text-verde-musgo">JARDIM VERTICAL</h1>
                     <p class="text-sm text-cinza-pedra">URBAN VERTICAL GARDENS</p>
@@ -324,7 +249,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div>
-                    <img src="assets/img/logo.png" alt="Jardim Vertical Logo" class="h-16 mb-4">
+                    <img src="assets/img/logo.png" alt="Jardim Vertical Logo" class="h-16 mb-4 bg-white rounded-full shadow-md">
                     <p class="mb-4">"Transformando concreto em vida"</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-white hover:text-verde-claro">

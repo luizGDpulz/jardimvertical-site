@@ -1,0 +1,85 @@
+:root {
+    --verde-musgo: #2E4A33;
+    --verde-claro: #7BB661;
+    --marrom-terra: #5D4037;
+    --cinza-pedra: #9E9E9E;
+    --branco-natural: #F5F5F5;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a2e22;
+    color: var(--verde-musgo);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+.btn-primary {
+    background: #2e7d32;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    transition: background 0.2s;
+}
+.btn-primary:hover {
+    background: #256025;
+}
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-secondary:hover {
+    background: #fff;
+    color: #2e7d32;
+}
+.nav-link {
+    position: relative;
+    color: var(--verde-musgo);
+    font-weight: 500;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--verde-claro);
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.hero-section {
+    background: linear-gradient(rgba(26,46,34,0.7), rgba(26,46,34,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=compress&w=1200&q=80') center/cover no-repeat;
+    min-height: 60vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-verde-musgo {
+    background-color: #18391b !important;
+}
+.text-verde-musgo {
+    color: #2e7d32 !important;
+}
+.text-cinza-pedra {
+    color: #b0b0b0 !important;
+}
+footer.bg-verde-musgo {
+    background-color: #18391b !important;
+    color: #fff;
+}
+footer a {
+    color: #fff;
+}
+footer a:hover {
+    color: #8bc34a;
+}
