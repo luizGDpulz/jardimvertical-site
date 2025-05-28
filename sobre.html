@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Jardim Vertical</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-musgo: #2E4A33;
+            --verde-claro: #7BB661;
+            --marrom-terra: #5D4037;
+            --cinza-pedra: #9E9E9E;
+            --branco-natural: #F5F5F5;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--branco-natural);
+            color: var(--verde-musgo);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .btn-primary {
+            background-color: var(--verde-musgo);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--verde-claro);
+            transform: translateY(-2px);
+        }
+        .nav-link {
+            position: relative;
+            color: var(--verde-musgo);
+            font-weight: 500;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--verde-claro);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            background-color: var(--verde-claro);
+            border-radius: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 1rem;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background-color: var(--verde-claro);
+            transform: translateX(-50%);
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        .team-member {
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="assets/img/logo.png" alt="Jardim Vertical Logo" class="h-16">
+                <div class="ml-4">
+                    <h1 class="text-2xl font-bold text-verde-musgo">JARDIM VERTICAL</h1>
+                    <p class="text-sm text-cinza-pedra">URBAN VERTICAL GARDENS</p>
+                </div>
+            </div>
+            <nav class="flex flex-wrap justify-center md:justify-end">
+                <a href="index.html" class="nav-link mx-3 my-2 md:my-0">Home</a>
+                <a href="sobre.html" class="nav-link mx-3 my-2 md:my-0">Sobre Nós</a>
+                <a href="produtos-servicos.html" class="nav-link mx-3 my-2 md:my-0">Produtos e Serviços</a>
+                <a href="portfolio.html" class="nav-link mx-3 my-2 md:my-0">Portfólio</a>
+                <a href="blog.html" class="nav-link mx-3 my-2 md:my-0">Blog</a>
+                <a href="contato.html" class="nav-link mx-3 my-2 md:my-0">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold mb-6">Nossa História</h2>
+                    <p class="mb-4">A Jardim Vertical é uma empresa especializada na criação e manutenção de jardins verticais para ambientes urbanos. Fundada em 2018 por uma bióloga e um arquiteto que se conheceram durante um projeto de revitalização urbana, a empresa nasceu da frustração com a crescente urbanização e a consequente redução de áreas verdes nas cidades.</p>
+                    <p class="mb-4">Nossa empresa se destaca por utilizar apenas espécies nativas e adaptadas ao clima local, reduzindo o consumo de água e aumentando a taxa de sobrevivência das plantas. Além disso, desenvolvemos um sistema próprio de irrigação automatizada que utiliza água da chuva coletada em cisternas especiais.</p>
+                    <p>Atualmente, contamos com uma equipe de 15 profissionais, incluindo biólogos, arquitetos, paisagistas e técnicos em jardinagem. Nossa sede fica em um antigo galpão industrial que foi completamente revitalizado e hoje abriga não apenas nossos escritórios, mas também um viveiro experimental e um showroom com diferentes modelos de jardins verticais.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1558435187-2a7c3ddc8b0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sede da Jardim Vertical" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nosso Propósito</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-xl mb-8">Nosso propósito é reconectar as pessoas com a natureza em ambientes urbanos, transformando espaços cinzentos em áreas vivas e respiráveis. Acreditamos que cada parede verde instalada é um passo em direção a cidades mais saudáveis e sustentáveis.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center md:w-1/3">
+                        <div class="bg-verde-claro rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Sustentabilidade</h3>
+                        <p>Promovemos práticas sustentáveis em todos os nossos projetos, desde a seleção de plantas até os sistemas de irrigação.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center md:w-1/3">
+                        <div class="bg-verde-claro rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Inovação</h3>
+                        <p>Investimos constantemente em pesquisa e desenvolvimento para criar soluções inovadoras em jardins verticais.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center md:w-1/3">
+                        <div class="bg-verde-claro rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Comunidade</h3>
+                        <p>Trabalhamos para criar espaços que promovam o bem-estar e a conexão entre as pessoas e a natureza.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nossa Equipe</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="team-member text-center">
+                    <div class="relative mb-4">
+                        <div class="w-48 h-48 rounded-full overflow-hidden mx-auto">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Marina Silva" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute bottom-0 right-1/4 bg-verde-claro rounded-full w-12 h-12 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Marina Silva</h3>
+                    <p class="text-gray-600">Co-fundadora e Bióloga</p>
+                    <p class="mt-2">Especialista em botânica urbana e sistemas de irrigação sustentáveis.</p>
+                </div>
+                <div class="team-member text-center">
+                    <div class="relative mb-4">
+                        <div class="w-48 h-48 rounded-full overflow-hidden mx-auto">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ricardo Almeida" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute bottom-0 right-1/4 bg-verde-claro rounded-full w-12 h-12 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Ricardo Almeida</h3>
+                    <p class="text-gray-600">Co-fundador e Arquiteto</p>
+                    <p class="mt-2">Especialista em arquitetura biofílica e integração de elementos naturais em construções.</p>
+                </div>
+                <div class="team-member text-center">
+                    <div class="relative mb-4">
+                        <div class="w-48 h-48 rounded-full overflow-hidden mx-auto">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Carla Mendes" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute bottom-0 right-1/4 bg-verde-claro rounded-full w-12 h-12 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Carla Mendes</h3>
+                    <p class="text-gray-600">Paisagista</p>
+                    <p class="mt-2">Especialista em design de jardins verticais e seleção de espécies nativas.</p>
+                </div>
+                <div class="team-member text-center">
+                    <div class="relative mb-4">
+                        <div class="w-48 h-48 rounded-full overflow-hidden mx-auto">
+                            <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="André Santos" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute bottom-0 right-1/4 bg-verde-claro rounded-full w-12 h-12 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">André Santos</h3>
+                    <p class="text-gray-600">Engenheiro de Sistemas</p>
+                    <p class="mt-2">Responsável pelo desenvolvimento dos sistemas de irrigação automatizada e monitoramento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nossa Trajetória</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="timeline-item">
+                    <h3 class="text-xl font-bold">2018</h3>
+                    <p class="text-gray-600">Fundação da Jardim Vertical por Marina Silva e Ricardo Almeida.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-bold">2019</h3>
+                    <p class="text-gray-600">Desenvolvimento do sistema proprietário de irrigação automatizada.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-bold">2020</h3>
+                    <p class="text-gray-600">Inauguração da sede em um galpão industrial revitalizado.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-bold">2021</h3>
+                    <p class="text-gray-600">Primeiro projeto de grande escala: revitalização da fachada de um edifício corporativo.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-bold">2022</h3>
+                    <p class="text-gray-600">Lançamento da linha de módulos pré-fabricados para pequenos espaços.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-bold">2023</h3>
+                    <p class="text-gray-600">Início do programa de workshops e cursos de capacitação.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-bold">2024</h3>
+                    <p class="text-gray-600">Desenvolvimento do sistema de monitoramento remoto da saúde das plantas.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-bold">2025</h3>
+                    <p class="text-gray-600">Expansão da equipe para 15 profissionais e ampliação do viveiro experimental.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold mb-6">Nossa Visão</h2>
+                    <h3 class="text-xl font-bold mb-4">Visão de Mercado</h3>
+                    <p class="mb-6">Acreditamos que o mercado de soluções verdes para ambientes urbanos está em plena expansão. Com o aumento da conscientização sobre questões ambientais e a crescente valorização de espaços que promovem bem-estar, os jardins verticais deixaram de ser apenas elementos decorativos para se tornarem componentes essenciais de construções sustentáveis.</p>
+                    
+                    <h3 class="text-xl font-bold mb-4">Visão da Economia</h3>
+                    <p class="mb-6">Entendemos que a economia atual passa por uma transição importante, onde práticas sustentáveis deixam de ser apenas um diferencial para se tornarem uma necessidade. Nossa empresa se posiciona como parte da solução para esta transição, oferecendo alternativas viáveis e economicamente atraentes para a integração da natureza em ambientes construídos.</p>
+                    
+                    <h3 class="text-xl font-bold mb-4">Visão da Sociedade</h3>
+                    <p>Percebemos uma sociedade cada vez mais desconectada da natureza e, ao mesmo tempo, mais consciente desta desconexão e seus impactos na saúde física e mental. Nossa missão social é transformar estes ambientes, trazendo a natureza de volta ao cotidiano das pessoas.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1558435186-db6d3d9383b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Jardim Vertical em ambiente urbano" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-verde-claro text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Conheça nossa sede</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Visite nosso showroom e viveiro experimental para conhecer de perto nossas soluções em jardins verticais.</p>
+            <a href="contato.html" class="btn-primary bg-white text-verde-musgo hover:bg-gray-100">Agendar Visita</a>
+        </div>
+    </section>
+
+    <footer class="bg-verde-musgo text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="assets/img/logo.png" alt="Jardim Vertical Logo" class="h-16 mb-4">
+                    <p class="mb-4">"Transformando concreto em vida"</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-verde-claro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-verde-claro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-verde-claro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-verde-claro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-verde-claro">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-verde-claro">Sobre Nós</a></li>
+                        <li><a href="produtos-servicos.html" class="hover:text-verde-claro">Produtos e Serviços</a></li>
+                        <li><a href="portfolio.html" class="hover:text-verde-claro">Portfólio</a></li>
+                        <li><a href="blog.html" class="hover:text-verde-claro">Blog</a></li>
+                        <li><a href="contato.html" class="hover:text-verde-claro">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Serviços</h3>
+                    <ul class="space-y-2">
+                        <li><a href="produtos-servicos.html#jardins-personalizados" class="hover:text-verde-claro">Jardins Verticais Personalizados</a></li>
+                        <li><a href="produtos-servicos.html#modulos-prefabricados" class="hover:text-verde-claro">Módulos Pré-fabricados</a></li>
+                        <li><a href="produtos-servicos.html#hortas-verticais" class="hover:text-verde-claro">Hortas Verticais</a></li>
+                        <li><a href="produtos-servicos.html#biofiltros" class="hover:text-verde-claro">Biofiltros Naturais</a></li>
+                        <li><a href="produtos-servicos.html#consultoria" class="hover:text-verde-claro">Consultoria em Arquitetura Verde</a></li>
+                        <li><a href="produtos-servicos.html#manutencao" class="hover:text-verde-claro">Manutenção e Monitoramento</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Rua das Plantas, 123<br>Jardim Botânico<br>São Paulo - SP</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>(11) 5555-5555</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>contato@jardimvertical.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Jardim Vertical. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

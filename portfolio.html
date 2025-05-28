@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Jardim Vertical</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-musgo: #2E4A33;
+            --verde-claro: #7BB661;
+            --marrom-terra: #5D4037;
+            --cinza-pedra: #9E9E9E;
+            --branco-natural: #F5F5F5;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--branco-natural);
+            color: var(--verde-musgo);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .btn-primary {
+            background-color: var(--verde-musgo);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--verde-claro);
+            transform: translateY(-2px);
+        }
+        .nav-link {
+            position: relative;
+            color: var(--verde-musgo);
+            font-weight: 500;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--verde-claro);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .project-image {
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="assets/img/logo.png" alt="Jardim Vertical Logo" class="h-16">
+                <div class="ml-4">
+                    <h1 class="text-2xl font-bold text-verde-musgo">JARDIM VERTICAL</h1>
+                    <p class="text-sm text-cinza-pedra">URBAN VERTICAL GARDENS</p>
+                </div>
+            </div>
+            <nav class="flex flex-wrap justify-center md:justify-end">
+                <a href="index.html" class="nav-link mx-3 my-2 md:my-0">Home</a>
+                <a href="sobre.html" class="nav-link mx-3 my-2 md:my-0">Sobre Nós</a>
+                <a href="produtos-servicos.html" class="nav-link mx-3 my-2 md:my-0">Produtos e Serviços</a>
+                <a href="portfolio.html" class="nav-link mx-3 my-2 md:my-0">Portfólio</a>
+                <a href="blog.html" class="nav-link mx-3 my-2 md:my-0">Blog</a>
+                <a href="contato.html" class="nav-link mx-3 my-2 md:my-0">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Nosso Portfólio</h2>
+            <p class="text-xl text-center max-w-3xl mx-auto mb-16">Conheça alguns dos nossos projetos mais impactantes e como transformamos espaços urbanos com nossas soluções verdes.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Projeto 1 -->
+                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1518012312832-96aea3c91144?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sede Corporativa Eco-friendly" class="project-image w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sede Corporativa Eco-friendly</h3>
+                        <p class="text-gray-600 mb-4">Transformação completa da fachada de um edifício corporativo no centro de São Paulo, criando um marco verde na paisagem urbana.</p>
+                        <div class="flex flex-wrap text-sm text-gray-500 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Fachada Verde</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Corporativo</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Grande Escala</span>
+                        </div>
+                        <a href="#" class="text-verde-musgo font-semibold hover:text-verde-claro">Ver detalhes →</a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1558350315-8aa00e8e4590?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Restaurante Verde" class="project-image w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Restaurante Verde</h3>
+                        <p class="text-gray-600 mb-4">Jardim vertical interno com horta funcional para um restaurante farm-to-table, fornecendo ervas frescas diretamente para a cozinha.</p>
+                        <div class="flex flex-wrap text-sm text-gray-500 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Horta Vertical</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Comercial</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Interior</span>
+                        </div>
+                        <a href="#" class="text-verde-musgo font-semibold hover:text-verde-claro">Ver detalhes →</a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Condomínio Residencial" class="project-image w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Condomínio Residencial</h3>
+                        <p class="text-gray-600 mb-4">Revitalização da área comum de um condomínio com jardins verticais e hortas comunitárias, criando espaços de convivência.</p>
+                        <div class="flex flex-wrap text-sm text-gray-500 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Residencial</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Área Comum</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Horta Comunitária</span>
+                        </div>
+                        <a href="#" class="text-verde-musgo font-semibold hover:text-verde-claro">Ver detalhes →</a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 4 -->
+                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1520302630591-fd1c66edc19d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hospital Humanizado" class="project-image w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Hospital Humanizado</h3>
+                        <p class="text-gray-600 mb-4">Implementação de jardins verticais em áreas de espera e recuperação de um hospital, criando ambientes mais acolhedores.</p>
+                        <div class="flex flex-wrap text-sm text-gray-500 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Saúde</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Biofiltro</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Bem-estar</span>
+                        </div>
+                        <a href="#" class="text-verde-musgo font-semibold hover:text-verde-claro">Ver detalhes →</a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 5 -->
+                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1604014056465-e1a0f0bab9e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Escola Sustentável" class="project-image w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Escola Sustentável</h3>
+                        <p class="text-gray-600 mb-4">Projeto educativo com horta vertical e jardins interativos para uma escola, integrando educação ambiental ao currículo.</p>
+                        <div class="flex flex-wrap text-sm text-gray-500 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Educacional</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Horta Didática</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Interativo</span>
+                        </div>
+                        <a href="#" class="text-verde-musgo font-semibold hover:text-verde-claro">Ver detalhes →</a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 6 -->
+                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Residência Urbana" class="project-image w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Residência Urbana</h3>
+                        <p class="text-gray-600 mb-4">Transformação de um pequeno apartamento urbano com sistema modular de jardim vertical, maximizando o verde em espaço limitado.</p>
+                        <div class="flex flex-wrap text-sm text-gray-500 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Residencial</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Pequeno Espaço</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2 mb-2">Modular</span>
+                        </div>
+                        <a href="#" class="text-verde-musgo font-semibold hover:text-verde-claro">Ver detalhes →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-8 mb-16">
+                <h3 class="text-2xl font-bold mb-6">Projetos em Destaque</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518219870542-8788eb7b3236?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Bosque Vertical" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Bosque Vertical</h4>
+                            <p class="text-gray-600 mb-4">Um dos nossos projetos mais ambiciosos, transformando um edifício inteiro em um verdadeiro bosque vertical, com mais de 80 espécies de plantas nativas.</p>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-sm text-gray-500">São Paulo, SP</span>
+                                </div>
+                                <a href="#" class="btn-primary">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1477064996809-dae46985eee7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Praça Sustentável" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Praça Sustentável</h4>
+                            <p class="text-gray-600 mb-4">Revitalização de uma praça pública com jardins verticais, horta comunitária e sistema de captação de água da chuva, criando um espaço de convivência sustentável.</p>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-sm text-gray-500">Rio de Janeiro, RJ</span>
+                                </div>
+                                <a href="#" class="btn-primary">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-6">Quer um projeto personalizado?</h3>
+                <p class="text-xl max-w-3xl mx-auto mb-8">Cada espaço é único e merece uma solução verde sob medida. Entre em contato conosco para discutir como podemos transformar seu ambiente.</p>
+                <a href="contato.html" class="btn-primary">Solicitar Orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-verde-musgo text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="assets/img/logo.png" alt="Jardim Vertical Logo" class="h-16 mb-4">
+                    <p class="mb-4">"Transformando concreto em vida"</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-verde-claro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-verde-claro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-verde-claro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-verde-claro">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-verde-claro">Sobre Nós</a></li>
+                        <li><a href="produtos-servicos.html" class="hover:text-verde-claro">Produtos e Serviços</a></li>
+                        <li><a href="portfolio.html" class="hover:text-verde-claro">Portfólio</a></li>
+                        <li><a href="blog.html" class="hover:text-verde-claro">Blog</a></li>
+                        <li><a href="contato.html" class="hover:text-verde-claro">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Serviços</h3>
+                    <ul class="space-y-2">
+                        <li><a href="produtos-servicos.html#jardins-personalizados" class="hover:text-verde-claro">Jardins Verticais Personalizados</a></li>
+                        <li><a href="produtos-servicos.html#modulos-prefabricados" class="hover:text-verde-claro">Módulos Pré-fabricados</a></li>
+                        <li><a href="produtos-servicos.html#hortas-verticais" class="hover:text-verde-claro">Hortas Verticais</a></li>
+                        <li><a href="produtos-servicos.html#biofiltros" class="hover:text-verde-claro">Biofiltros Naturais</a></li>
+                        <li><a href="produtos-servicos.html#consultoria" class="hover:text-verde-claro">Consultoria em Arquitetura Verde</a></li>
+                        <li><a href="produtos-servicos.html#manutencao" class="hover:text-verde-claro">Manutenção e Monitoramento</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Rua das Plantas, 123<br>Jardim Botânico<br>São Paulo - SP</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>(11) 5555-5555</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>contato@jardimvertical.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Jardim Vertical. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
